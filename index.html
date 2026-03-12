@@ -11,6 +11,46 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   
   <style>
+  .book-corner{
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.book-btn{
+  width: 55px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-weight: bold;
+  font-size: 13px;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: Georgia, serif;
+}
+
+.book-btn:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.4);
+}
+
+/* book colors */
+.amazon-book{
+  background: linear-gradient(180deg,#ff9900,#cc7a00);
+}
+
+.goodreads-book{
+  background: linear-gradient(180deg,#6b4f1d,#3d2c0a);
+}
     * { box-sizing: border-box; margin:0; padding:0; }
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
@@ -378,16 +418,20 @@
     <span class="close" onclick="closeModal('aboutModal')">×</span>
     <h2>About Us</h2>
     
-    <b>About Our Coaching Classes</b>
-    <p>Our coaching classes are dedicated to helping students build a strong foundation in Mathematics and academic excellence.
-      We focus on clear concepts, practical understanding, and personalized attention so that every student can improve their performance and confidence in studies.
-      With structured teaching methods, regular practice sessions, and continuous guidance, our goal is to help students learn, achieve, and excel in their academic journey.</p>
+   <b>About Our Coaching Classes</b>
+<p style="text-align: justify;">
+Our coaching classes are dedicated to helping students build a strong foundation in Mathematics and academic excellence.
+We focus on clear concepts, practical understanding, and personalized attention so that every student can improve their performance and confidence in studies.
+With structured teaching methods, regular practice sessions, and continuous guidance, our goal is to help students learn, achieve, and excel in their academic journey.
+</p>
 
-    <b>About Hemant Gavde</b>
-    <p>Hemant Gavde is an experienced Mathematics educator with 11+ years of teaching experience in both coaching and college-level education.
-      He holds a Master’s degree in Mathematics and has taught students at various academic levels. His teaching approach focuses on simplifying complex mathematical concepts and helping students understand mathematics in a clear and practical way.
-      He has also served as Assistant Professor of Mathematics at college level and has teaching experience with higher education students, which adds depth and expertise to his coaching methodology.
-      With a passion for teaching and guiding students, Hemant Gavde aims to inspire learners to develop strong analytical skills and confidence in mathematics.</p>
+<b>About Hemant Gavde</b>
+<p style="text-align: justify;">
+Hemant Gavde is an experienced Mathematics educator with 11+ years of teaching experience in both coaching and college-level education.
+He holds a Master’s degree in Mathematics and has taught students at various academic levels. His teaching approach focuses on simplifying complex mathematical concepts and helping students understand mathematics in a clear and practical way.
+He has also served as Assistant Professor of Mathematics at college level and has teaching experience with higher education students, which adds depth and expertise to his coaching methodology.
+With a passion for teaching and guiding students, Hemant Gavde aims to inspire learners to develop strong analytical skills and confidence in mathematics.
+</p>
   </div>
 </div>
 
@@ -434,5 +478,14 @@
     }
   }
 </script>
+<div class="book-corner">
+  <a href="YOUR_AMAZON_LINK" target="_blank" class="book-btn amazon-book">
+    Amazon
+  </a>
+
+  <a href="YOUR_GOODREADS_LINK" target="_blank" class="book-btn goodreads-book">
+    Goodreads
+  </a>
+</div>
 </body>
 </html>
