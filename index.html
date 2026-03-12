@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hemant Coaching Classes | Indore</title>
+  
+  <meta name="description" content="Best coaching classes in Indore for Class 9-12 Commerce & Science. Expert teaching in Mathematics, Accounts, Economics, Physics, Chemistry. Concept-based learning for top results."/>
+  
+  <link rel="icon" href="https://via.placeholder.com/32/0a4c8a/ffffff?text=HC" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f8f9fc;
+      color: #333;
+      line-height: 1.5;
+    }
+    html { scroll-behavior: smooth; }
+
+    header {
+      background: linear-gradient(135deg, #0a4c8a 0%, #1565c0 100%);
+      color: white;
+      text-align: center;
+      padding: 45px 15px 35px;
+      position: relative;
+    }
+
+    .logo-container { margin-bottom: 12px; }
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      object-fit: contain;
+      background: white;
+      transition: transform 0.3s ease;
+    }
+    .logo:hover { transform: scale(1.08); }
+
+    header h1 { font-size: 2.5rem; margin-bottom: 8px; font-weight: 700; }
+    header p { font-size: 1.15rem; opacity: 0.95; margin: 0 auto; max-width: 700px; }
+
+    .hero-cta { margin-top: 20px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      margin: 8px 6px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .btn-primary   { background: #25D366; color: white; }
+    .btn-primary:hover { background: #1ebe4d; transform: translateY(-3px); }
+    .btn-outline   { border: 2px solid white; color: white; }
+    .btn-outline:hover { background: white; color: #0a4c8a; transform: translateY(-3px); }
+
+    nav {
+      background: #0f0f0f;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 6px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+    nav a {
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.98rem;
+      transition: 0.3s;
+    }
+    nav a:hover { background: #333; }
+
+    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    h2 {
+      text-align: center;
+      color: #0a4c8a;
+      margin-bottom: 40px;
+      font-size: 2.4rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 90px;
+      height: 4px;
+      background: #25D366;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      padding: 25px;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+    }
+    .card i { font-size: 3rem; color: #0a4c8a; margin-bottom: 18px; }
+    .card h3 { color: #0a4c8a; margin-bottom: 12px; font-size: 1.5rem; }
+    .card p { color: #110202; font-size: 1.5rem; }
+
+    .testimonial .stars { color: #f39c12; font-size: 2rem; margin-bottom: 10px; }
+
+    /* ── GALLERY ── */
+    .gallery-container {
+      overflow-x: auto;
+      overflow-y: hidden;
+      white-space: nowrap;
+      padding: 15px 0;
+      -webkit-overflow-scrolling: touch;           /* Smooth momentum scrolling on iOS */
+      scrollbar-width: thin;                        /* Firefox */
+      scrollbar-color: #25D366 #e0e0e0;
+    }
+    .gallery-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    .gallery-container::-webkit-scrollbar-track {
+      background: #e0e0e0;
+      border-radius: 10px;
+    }
+    .gallery-container::-webkit-scrollbar-thumb {
+      background: #25D366;
+      border-radius: 10px;
+    }
+    .gallery {
+      display: inline-flex;
+      gap: 16px;
+    }
+    .gallery img {
+      height: 220px;                          /* Fixed height – change as needed */
+      width: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.04);
+    }
+
+    .float-whatsapp {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25D366;
+      color: white;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 9999;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .float-whatsapp:hover { transform: scale(1.2); }
+
+    footer {
+      background: #0a4c8a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 70px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-content {
+      background: white;
+      border-radius: 18px;
+      max-width: 520px;
+      width: 100%;
+      padding: 35px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .close {
+      position: absolute;
+      top: 18px;
+      right: 25px;
+      font-size: 2.2rem;
+      cursor: pointer;
+      color: #666;
+    }
+    .close:hover { color: #000; }
+
+    #welcomeModal .modal-content { text-align: center; }
+    #welcomeModal h2 { color: #0a4c8a; margin-bottom: 25px; }
+    #welcomeModal p { font-size: 1.15rem; margin-bottom: 30px; }
+
+    .map-container {
+      margin-top: 30px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+
+    @media (max-width: 768px) {
+      header { padding: 40px 12px 30px; }
+      header h1 { font-size: 2.1rem; }
+      .logo { width: 75px; height: 75px; }
+      nav a { padding: 10px 16px; font-size: 0.92rem; }
+      .btn { padding: 10px 24px; font-size: 1rem; }
+      .gallery img { height: 180px; } /* Smaller on mobile */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Hemant Coaching Classes Logo" class="logo">
+  </div>
+  <h1>matHemantics Learning Classes</h1>
+  <p>Expert Coaching in Indore – Maths, Commerce & Science</p>
+  
+  <div class="hero-cta">
+    <a href="https://wa.me/919685165987" class="btn btn-primary" target="_blank">
+      <i class="fab fa-whatsapp"></i> Enquire on WhatsApp</a>
+  </div>
+</header>
+
+<nav>
+  <a href="#about" onclick="openModal('aboutModal')">About</a>
+  <a href="#courses">Batches</a>
+  <a href="#students">Reviews</a>
+  <a href="#articles">Tips</a>
+  <a href="#gallery">Gallery</a>       <!-- Added link to gallery -->
+  <a href="#contact" onclick="openModal('contactModal')">Contact</a>
+</nav>
+
+<section id="courses">
+  <h2>Our Batches 2026-27</h2>
+  <div class="grid">
+    <div class="card">
+      <i class="fas fa-calculator"></i>
+      <h3>Class 11th & 12th Commerce</h3>
+      <p>Accounts | Economics | Business Maths<br></p><p>(CBSE / MP Board)</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-flask"></i>
+      <h3>Class 11th & 12th Science (PCM)</h3>
+      <p>Mathematics | Physics | Chemistry<br></p><p>(CBSE / MP Board)</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-compass"></i>
+      <h3>Class 9 & 10 Foundation</h3>
+      <p>Mathematics | Science </p><p>(CBSE / MP Board)</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-pencil-alt"></i>
+      <h3>Class 5th, 6th, 7th & 8th</h3>
+      <p>All Subjects</p><p>(CBSE / MP Board)</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-laptop-code"></i>
+      <h3>College Courses</h3>
+      <p>Mathematics | Computer & More</p><p>(All University)</p>
+    </div>
+  </div>
+</section>
+
+<section id="students">
+  <h2>What Our Students Say</h2>
+  <div class="grid">
+    <div class="card testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"Best coaching for mathematics in Indore. Concepts became very clear — highly recommended!"</p>
+      <b>— Rahul Sharma, Class 12</b>
+    </div>
+    <div class="card testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"Accounts marks improved from 62 to 94 in 8 months. Thank you sir for excellent guidance."</p>
+      <b>— Sneha Jain, Class 12</b>
+    </div>
+    <div class="card testimonial">
+      <div class="stars">★★★★★</div>
+      <p>"Physics felt tough before — now it's my favourite. Great teaching style!"</p>
+      <b>— Aryan Patel, Class 11</b>
+    </div>
+  </div>
+</section>
+
+<section id="articles">
+  <h2>Useful Study Tips</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>How to Score 90+ in Mathematics</h3>
+      <p>Daily practice • Master NCERT • Solve past papers • Revise formulas weekly.</p>
+    </div>
+    <div class="card">
+      <h3>Best Study Routine for Class 12</h3>
+      <p>4–5 focused hours • Pomodoro • Weekly mocks • Balance with rest.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEW GALLERY SECTION ── -->
+<section id="gallery">
+  <h2>Our Coaching Gallery</h2>
+  <div class="gallery-container">
+    <div class="gallery">
+      <!-- REPLACE these src with your real photos (upload to same folder or use URLs) -->
+      <img src="https://via.placeholder.com/400x220/0a4c8a/ffffff?text=Classroom+1" alt="Classroom Session 1">
+      <img src="https://via.placeholder.com/400x220/1565c0/ffffff?text=Maths+Class" alt="Maths Teaching">
+      <img src="https://via.placeholder.com/400x220/25D366/000000?text=Students+Happy" alt="Happy Students">
+      <img src="https://via.placeholder.com/400x220/0a4c8a/ffffff?text=Group+Study" alt="Group Discussion">
+      <img src="https://via.placeholder.com/400x220/1565c0/ffffff?text=Board+Results" alt="Result Celebration">
+      <img src="https://via.placeholder.com/400x220/25D366/000000?text=Physics+Lab" alt="Science Practical">
+      <!-- Add more <img> tags here as needed -->
+    </div>
+  </div>
+  </section>
+
+<footer>
+  <p>© 2026 matHemantics Learning Classes | Indore, MP</p>
+</footer>
+
+<a href="https://wa.me/919685165987?text=Hello%20Sir%2C%20I%20want%20to%20know%20about%20admission" class="float-whatsapp" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Welcome Popup -->
+<div id="welcomeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('welcomeModal')">×</span>
+    <h2>नमस्ते!</h2>
+    <p>Welcome to matHemantics Learning Classes!<br>Strong concepts – Top marks in Maths, Commerce & Science.<br>Let's connect!</p>
+    <a href="https://wa.me/919685165987
+    text=Hello%20Sir%2C%20I%20just%20visited%20your%20website" class="btn btn-primary" target="_blank">
+      <i class="fab fa-whatsapp"></i> Chat Now
+    </a>
+  </div>
+</div>
+
+<!-- About Modal -->
+<div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('aboutModal')">×</span>
+    <h2>About Us</h2>
+    <p>Concept-based coaching for Mathematics, Commerce (Accounts, Economics) and Science in Indore.<br>Strong fundamentals → Excellent results.</p>
+  </div>
+</div>
+
+<!-- Contact Modal with Google Maps -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('contactModal')">×</span>
+    <h2>Contact Us</h2>
+    <p><b>Teacher:</b> Hemant Gavde</p>
+    <p><b>Phone / WhatsApp:</b> +91 9685165987</p>
+    <p><b>Address:</b> 49/2 Moti Tabela, Near Collector Office, Indore, MP</p>
+    
+    <div class="map-container">
+      <!-- REPLACE WITH YOUR REAL GOOGLE MAPS IFRAME -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230.03022992004227!2d75.85412386804823!3d22.710256965038248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fdf69195a90b%3A0x25bda699b07fbfa5!2smatHemantics%20Learning%20Classes!5e0!3m2!1sen!2sin!4v1773310355735!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div style="margin-top:25px; text-align:center;">
+      <a href="https://wa.me/917XXXXXXXXX?text=Hello%20Sir%2C%20I%20want%20to%20know%20about%20admission" class="btn btn-primary" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp Message
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  window.onclick = function(e) {
+    if (e.target.classList.contains('modal')) {
+      e.target.style.display = "none";
+    }
+  }
+
+  window.onload = function() {
+    if (!localStorage.getItem('welcomeShown')) {
+      openModal('welcomeModal');
+      localStorage.setItem('welcomeShown', 'true');
+    }
+  }
+</script>
+</body>
+</html>
