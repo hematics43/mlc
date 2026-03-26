@@ -2,12 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>matHemantics Learning Classes | Indore</title>
   
   <meta name="description" content="Best coaching classes in Indore for Class 9-12 Commerce & Science. Expert teaching in Mathematics, Accounts, Economics, Physics, Chemistry. Concept-based learning for top results."/>
-  
+  <meta name="keywords" content="coaching classes indore, maths classes indore, commerce coaching indore, science coaching indore, best tuition indore">
+  <meta name="author" content="Hemant Gavde">
+<meta property="og:title" content="Best Coaching Classes in Indore">
+<meta property="og:description" content="Top Maths, Science & Commerce Coaching in Indore">
+<meta property="og:type" content="website">
   <link rel="icon" href="https://via.placeholder.com/32/0a4c8a/ffffff?text=HC" type="image/x-icon"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   
@@ -54,10 +59,11 @@
 }
     * { box-sizing: border-box; margin:0; padding:0; }
     body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: #f8f9fc;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;background: #f8f9fc;
       color: #333;
       line-height: 1.5;
+      overflow-x: hidden;
+
     }
     html { scroll-behavior: smooth; }
 
@@ -68,7 +74,16 @@
       padding: 45px 15px 35px;
       position: relative;
     }
-
+    header h1 {
+  letter-spacing: 1px;
+}
+input, textarea, select {
+  font-size: 16px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
     .logo-container { margin-bottom: 12px; }
     .logo {
       width: 90px;
@@ -88,12 +103,12 @@
     .hero-cta { margin-top: 20px; }
     .btn {
       display: inline-block;
-      padding: 12px 28px;
+      padding: 14px 26px;
       margin: 8px 6px;
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
@@ -101,7 +116,10 @@
     .btn-primary:hover { background: #1ebe4d; transform: translateY(-3px); }
     .btn-outline   { border: 2px solid white; color: white; }
     .btn-outline:hover { background: white; color: #0a4c8a; transform: translateY(-3px); }
-
+.btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
     nav {
       background: #0f0f0f;
       position: sticky;
@@ -156,12 +174,15 @@
       text-align: center;
     }
     .card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-12px) scale(1.02);
       box-shadow: 0 20px 45px rgba(0,0,0,0.15);
     }
     .card i { font-size: 3rem; color: #0a4c8a; margin-bottom: 18px; }
     .card h3 { color: #0a4c8a; margin-bottom: 12px; font-size: 1.5rem; }
-    .card p { color: #110202; font-size: 1.5rem; }
+   .card p {
+  font-size: 1rem;
+  color: #555;
+}
 
     .testimonial .stars { color: #f39c12; font-size: 2rem; margin-bottom: 10px; }
 
@@ -208,13 +229,13 @@
       right: 30px;
       background: #25D366;
       color: white;
-      width: 75px;
-      height: 75px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.2rem;
+      font-size: 1.6rem;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       z-index: 9999;
       text-decoration: none;
@@ -226,15 +247,15 @@
       position: fixed;
       bottom: 30px;
       left: 30px;
-      background: #25D366;
+      background: #0a4c8a;
       color: white;
-      width: 75px;
-      height: 75px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.2rem;
+      font-size: 1.6rem;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       z-index: 9999;
       text-decoration: none;
@@ -296,32 +317,55 @@
       border: 0;
     }
 
-    @media (max-width: 768px) {
-      header { padding: 40px 12px 30px; }
-      header h1 { font-size: 2.1rem; }
-      .logo { width: 75px; height: 75px; }
-      nav a { padding: 10px 16px; font-size: 0.92rem; }
-      .btn { padding: 10px 24px; font-size: 1rem; }
-      .gallery img { height: 180px; } /* Smaller on mobile */
-    }
-    #quote-box p {
+    @media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+}
+#quote-box p {
   display: none;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
-  color: #f2f5f3;
+  color: #e3f2fd;
+  font-weight: 500;
+
+
 }
 #quote-box p.active {
   display: block;
 }
+.card {
+  animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 </head>
 <body>
-
+<div style="background:#25D366;color:white;text-align:center;padding:8px;font-weight:600;">
+  Admissions Open for 2026-27 | Limited Seats 🚀
+</div>
 <header>
   <div class="logo-container">
     <img src="logo.png" alt="Hemant Coaching Classes Logo" class="logo">
   </div>
   <h1>matHemantics Learning Classes</h1>
+  <p>Best Coaching Classes in Indore for Maths, Science & Commerce</p><br>
   <div id="quote-box">
   <p>"Imagination is more important than knowledge." – Albert Einstein</p>
   <p>"Science is a way of thinking much more than it is a body of knowledge." – Carl Sagan</p>
@@ -407,7 +451,7 @@
   <div class="grid">
     <div class="card">
       <h3>Clear Concepts | Strong Basics | Better Results</h3>
-      <p><b>We (MLC)</b> focuses on clear concepts, personal attention, and strong basics, helping students improve confidence and achieve better results in mathematics.</p></br>
+      <p><b>We (MLC)</b> focuses on clear concepts, personal attention, and strong basics, helping students improve confidence and achieve better results in mathematics.</p><br>
         <p><b>Daily practice • Master NCERT • Solve past papers • Revise formulas weekly.</b></p>
     </div>
     
@@ -444,18 +488,7 @@
   <i class="fa-solid fa-phone"></i>
   </a>
 
-<!-- Welcome Popup -->
-<div id="welcomeModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('welcomeModal')">×</span>
-    <h2>नमस्ते!</h2>
-    <p>Welcome to matHemantics Learning Classes!<br>Strong concepts – Top marks in Maths, Commerce & Science.<br>Let's connect!</p>
-    <a href="https://wa.me/919685165987
-    text=Hello%20Sir%2C%20I%20just%20visited%20your%20website" class="btn btn-primary" target="_blank">
-      <i class="fab fa-whatsapp"></i> Chat Now
-    </a>
-  </div>
-</div>
+
 
 <!-- About Modal -->
 <div id="aboutModal" class="modal">
@@ -485,10 +518,8 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
   <div class="modal-content">
     <span class="close" onclick="closeModal('contactModal')">×</span>
     <h2>Contact Us</h2>
-    <!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-<p style="font-family:'Poppins', sans-serif; font-size:20px; color:#1a237e; margin:6px 0;">
+    
+    <p style="font-family:'Poppins', sans-serif; font-size:20px; color:#1a237e; margin:6px 0;">
   <b>👤 Hemant Gavde</b>
 </p>
 
@@ -511,7 +542,7 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
     </div>
 
     <div style="margin-top:25px; text-align:center;">
-      <a href="https://wa.me/917XXXXXXXXX?text=Hello%20Sir%2C%20I%20want%20to%20know%20about%20admission" class="btn btn-primary" target="_blank">
+      <a href="https://wa.me/919685165987?text=Hello%20Sir%2C%20I%20want%20to%20know%20about%20admission" class="btn btn-primary" target="_blank">
         <i class="fab fa-whatsapp"></i> WhatsApp Message
       </a>
     </div>
@@ -524,7 +555,7 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
   function showQuote() {
     quotes.forEach(q => q.classList.remove("active"));
     quotes[index].classList.add("active");
-    index = (index + 3) % quotes.length;
+    index = (index + 1) % quotes.length;
   }
 
   showQuote(); // show first quote
@@ -544,12 +575,7 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
     }
   }
 
-  window.onload = function() {
-    if (!localStorage.getItem('welcomeShown')) {
-      openModal('welcomeModal');
-      localStorage.setItem('welcomeShown', 'true');
-    }
-  }
+ 
 </script>
 <div class="book-corner">
   <a href="https://www.amazon.in/stores/Hemant-Gavde/author/B0GN3FR5Q3?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" class="book-btn amazon-book">
@@ -560,5 +586,6 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
     Goodreads
   </a>
 </div>
+
 </body>
 </html>
