@@ -308,22 +308,24 @@ nav a {
       padding: 20px;
     }
     .modal-content {
-      background: white;
+      background: rgb(223, 224, 232);
       border-radius: 18px;
-      max-width: 520px;
+      max-width: AUTO;
       width: 100%;
-      padding: 35px;
+      padding: 30px;
       position: relative;
       box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
     .close {
-      position: absolute;
-      top: 18px;
-      right: 25px;
-      font-size: 2.2rem;
-      cursor: pointer;
-      color: #666;
-    }
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  z-index: 10001; /* 🔥 important */
+  padding: 5px 10px;
+}
     .close:hover { color: #000; }
 
     #welcomeModal .modal-content { text-align: center; }
@@ -536,6 +538,7 @@ With structured teaching methods, regular practice sessions, and continuous guid
 <b>About Hemant Gavde</b>
 <p style="text-align: justify;">
 Hemant Gavde is an experienced Mathematics educator with 11+ years of teaching experience in both coaching and college-level education.
+He is also a recognized author on <a href="https://www.amazon.in/stores/Hemant-Gavde/author/B0GN3FR5Q3" target="_blank" style="color:#ff9800; text-decoration:none; font-weight:600;">Amazon</a>, contributing meaningful books that inspire and educate society.<br>
 He holds a Master’s degree in Mathematics and has taught students at various academic levels. His teaching approach focuses on simplifying complex mathematical concepts and helping students understand mathematics in a clear and practical way.
 He has also served as Assistant Professor of Mathematics at college level and has teaching experience with higher education students, which adds depth and expertise to his coaching methodology.
 With a passion for teaching and guiding students, Hemant Gavde aims to inspire learners to develop strong analytical skills and confidence in mathematics.
@@ -549,7 +552,7 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
     <span class="close" onclick="closeModal('contactModal')">×</span>
     <h2>Contact Us</h2>
     
-    <p style="font-family:'Poppins', sans-serif; font-size:20px; color:#1a237e; margin:6px 0;">
+    <b><p style="font-family:'Poppins', sans-serif; font-size:20px; color:#1a237e; margin:6px 0;">
   <b>👤 Hemant Gavde</b>
 </p>
 
@@ -561,8 +564,8 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
 </p>
 
 <p style="font-family:'Poppins', sans-serif; font-size:16px; color:#d84315; margin:6px 0;">
-  <b>📍 Address:</b> 49/2 Moti Tabela, Near Collector Office, Indore, MP
-</p>
+  <b>📍 Address:</b> 49/2 Moti Tabela, Near Collector Office, Indore-452001, M.P.
+</p></b>
 
 
     
@@ -592,20 +595,31 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
   setInterval(showQuote, 5000); // change every 3 seconds
 </script>
 <script>
-  function openModal(id) {
-    document.getElementById(id).style.display = "flex";
-  }
-  function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
+function openModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
 
-  window.onclick = function(e) {
-    if (e.target.classList.contains('modal')) {
-      e.target.style.display = "none";
-    }
-  }
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
 
- 
+/* 🔥 FIX FOR MOBILE CLICK ISSUE */
+document.querySelectorAll('.close').forEach(btn => {
+  btn.addEventListener('click', function () {
+    this.closest('.modal').style.display = 'none';
+  });
+
+  btn.addEventListener('touchstart', function () {
+    this.closest('.modal').style.display = 'none';
+  });
+});
+
+/* click outside to close */
+window.addEventListener('click', function(e) {
+  if (e.target.classList.contains('modal')) {
+    e.target.style.display = "none";
+  }
+});
 </script>
 
 <div class="book-corner">
