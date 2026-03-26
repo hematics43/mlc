@@ -155,10 +155,10 @@ nav a {
   flex: 1;                 /* auto adjust width */
   text-align: center;
   color: white;
-  padding: 10px 5px;
+  padding: 10px 4px;
   text-decoration: none;
   font-weight: 600;
-  font-size: clamp(10px, 2.5vw, 14px); /* 🔥 responsive text */
+  font-size: clamp(9px, 2.2vw, 13px);
   transition: 0.3s;
   white-space: nowrap;     /* keep single line */
   letter-spacing: 0.3px;
@@ -186,8 +186,8 @@ nav a {
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 10fr));
+      gap: 13px;
     }
     .card {
       background: white;
@@ -250,12 +250,12 @@ nav a {
 
     .float-whatsapp {
       position: fixed;
-      bottom: 30px;
-      right: 30px;
+      bottom: 20px;
+      right: 20px;
       background: #25D366;
       color: white;
-      width: 60px;
-      height: 60px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -270,12 +270,12 @@ nav a {
 
 .float-call {
       position: fixed;
-      bottom: 30px;
-      left: 30px;
+      bottom: 20px;
+      left: 20px;
       background: #0a4c8a;
       color: white;
-      width: 60px;
-      height: 60px;
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -293,8 +293,8 @@ nav a {
       background: #0a4c8a;
       color: white;
       text-align: center;
-      padding: 40px 20px;
-      margin-top: 70px;
+      padding: 10px 10px;
+      margin-top: 10px;
     }
 
     .modal {
@@ -422,7 +422,8 @@ nav a {
   <a href="#courses">Batches</a>
   <a href="#students">Reviews</a>
   <a href="#articles">Why MLC??</a>
-  <a href="#gallery">Gallery</a>       <!-- Added link to gallery -->
+  <a href="#facilities">Facilities</a>
+  <!-- <a href="#gallery">Facilities</a>Added link to gallery -->
   <a href="#contact" onclick="openModal('contactModal')">Contact</a>
 </nav>
 
@@ -490,25 +491,60 @@ nav a {
   </div>
 </section>
 
-<!-- ── NEW GALLERY SECTION ── -->
+<!-- ── NEW GALLERY SECTION 
 <section id="gallery">
   <h2>Our Coaching Gallery</h2>
   <div class="gallery-container">
     <div class="gallery">
-      <!-- REPLACE these src with your real photos (upload to same folder or use URLs) -->
       <img src="https://via.placeholder.com/400x220/0a4c8a/ffffff?text=Classroom+1" alt="Classroom Session 1">
-      <img src="https://via.placeholder.com/400x220/1565c0/ffffff?text=Maths+Class" alt="Maths Teaching">
-      <img src="https://via.placeholder.com/400x220/25D366/000000?text=Students+Happy" alt="Happy Students">
-      <img src="https://via.placeholder.com/400x220/0a4c8a/ffffff?text=Group+Study" alt="Group Discussion">
-      <img src="https://via.placeholder.com/400x220/1565c0/ffffff?text=Board+Results" alt="Result Celebration">
-      <img src="https://via.placeholder.com/400x220/25D366/000000?text=Physics+Lab" alt="Science Practical">
-      <!-- Add more <img> tags here as needed -->
     </div>
   </div>
-  </section>
+  </section>-->
 
+
+<section id="facilities">
+  <h2>Our Key Features & Facilities</h2>
+    <div class="grid">
+    <div class="card">
+      <i class="fas fa-user-graduate"></i>
+      <h3>Personal Attention</h3>
+      <p>Small batch sizes ensure individual focus on every student.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-book-open"></i>
+      <h3>Concept-Based Learning</h3>
+      <p>Strong focus on fundamentals and clarity of concepts.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-clipboard-check"></i>
+      <h3>Regular Tests</h3>
+      <p>Weekly tests and performance analysis for improvement.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-file-alt"></i>
+      <h3>Study Material</h3>
+      <p>Well-structured notes, assignments, and practice papers.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-chart-line"></i>
+      <h3>Result-Oriented Approach</h3>
+      <p>Focused preparation for board exams and top results.</p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-clock"></i>
+      <h3>Doubt Sessions</h3>
+      <p>Extra classes for clearing doubts and revision.</p>
+    </div>
+
+  </div>
+</section>
 <footer>
-  <p>© 2026 matHemantics Learning Classes | Indore, MP</p>
+  <p>© 2026 matHemantics Learning Classes | Indore</p>
 </footer>
 
 <a href="https://wa.me/919685165987?text=Hello%20Sir%2C%20I%20want%20to%20know%20about%20admission" class="float-whatsapp" target="_blank">
@@ -533,7 +569,7 @@ nav a {
 Our coaching classes are dedicated to helping students build a strong foundation in Mathematics and academic excellence.
 We focus on clear concepts, practical understanding, and personalized attention so that every student can improve their performance and confidence in studies.
 With structured teaching methods, regular practice sessions, and continuous guidance, our goal is to help students learn, achieve, and excel in their academic journey.
-</p>
+</p><br>
 
 <b>About Hemant Gavde</b>
 <p style="text-align: justify;">
@@ -631,6 +667,7 @@ window.addEventListener('click', function(e) {
     Goodreads
   </a>
 </div>
+
 
 </body>
 </html>
