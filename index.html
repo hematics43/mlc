@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -221,6 +222,27 @@
     }
     .float-whatsapp:hover { transform: scale(1.2); }
 
+.float-call {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: #25D366;
+      color: white;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 9999;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .float-call:hover { transform: scale(1.2); }
+
+
     footer {
       background: #0a4c8a;
       color: white;
@@ -282,7 +304,16 @@
       .btn { padding: 10px 24px; font-size: 1rem; }
       .gallery img { height: 180px; } /* Smaller on mobile */
     }
-  </style>
+    #quote-box p {
+  display: none;
+  font-size: 14px;
+  text-align: center;
+  color: #f2f5f3;
+}
+#quote-box p.active {
+  display: block;
+}
+</style>
 </head>
 <body>
 
@@ -291,7 +322,18 @@
     <img src="logo.png" alt="Hemant Coaching Classes Logo" class="logo">
   </div>
   <h1>matHemantics Learning Classes</h1>
-  <p>Expert Coaching in Indore – Maths, Commerce & Science</p>
+  <div id="quote-box">
+  <p>"Imagination is more important than knowledge." – Albert Einstein</p>
+  <p>"Science is a way of thinking much more than it is a body of knowledge." – Carl Sagan</p>
+  <p>"The important thing is not to stop questioning." – Albert Einstein</p>
+  <p>"Somewhere, something incredible is waiting to be known." – Carl Sagan</p>
+  <p>"If I have seen further it is by standing on the shoulders of Giants." – Isaac Newton</p>
+  <p>"Equipped with his five senses, man explores the universe around him." – Edwin Hubble</p>
+  <p>"What we know is a drop, what we don't know is an ocean." – Isaac Newton</p>
+  <p>"Research is what I'm doing when I don't know what I'm doing." – Wernher von Braun</p>
+  <p>"The good thing about science is that it's true whether or not you believe in it." – Neil deGrasse Tyson</p>
+  <p>"Some people don't like change, but you need to embrace change." – Bill Gates</p>
+</div>
   
   <div class="hero-cta">
     <a href="https://wa.me/919685165987" class="btn btn-primary" target="_blank">
@@ -303,7 +345,7 @@
   <a href="#about" onclick="openModal('aboutModal')">About</a>
   <a href="#courses">Batches</a>
   <a href="#students">Reviews</a>
-  <a href="#articles">Tips</a>
+  <a href="#articles">Why MLC??</a>
   <a href="#gallery">Gallery</a>       <!-- Added link to gallery -->
   <a href="#contact" onclick="openModal('contactModal')">Contact</a>
 </nav>
@@ -361,16 +403,14 @@
 </section>
 
 <section id="articles">
-  <h2>Useful Study Tips</h2>
+  <h2>Why MLC?</h2>
   <div class="grid">
     <div class="card">
-      <h3>How to Score 90+ in Mathematics</h3>
-      <p>Daily practice • Master NCERT • Solve past papers • Revise formulas weekly.</p>
+      <h3>Clear Concepts | Strong Basics | Better Results</h3>
+      <p><b>We (MLC)</b> focuses on clear concepts, personal attention, and strong basics, helping students improve confidence and achieve better results in mathematics.</p></br>
+        <p><b>Daily practice • Master NCERT • Solve past papers • Revise formulas weekly.</b></p>
     </div>
-    <div class="card">
-      <h3>Best Study Routine for Class 12</h3>
-      <p>4–5 focused hours • Pomodoro • Weekly mocks • Balance with rest.</p>
-    </div>
+    
   </div>
 </section>
 
@@ -398,6 +438,11 @@
 <a href="https://wa.me/919685165987?text=Hello%20Sir%2C%20I%20want%20to%20know%20about%20admission" class="float-whatsapp" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
+<!-- Call Button -->
+<a href="tel:+919685165987" 
+   class="float-call" target="_blank">
+  <i class="fa-solid fa-phone"></i>
+  </a>
 
 <!-- Welcome Popup -->
 <div id="welcomeModal" class="modal">
@@ -440,9 +485,25 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
   <div class="modal-content">
     <span class="close" onclick="closeModal('contactModal')">×</span>
     <h2>Contact Us</h2>
-    <p><b>Teacher:</b> Hemant Gavde</p>
-    <p><b>Phone / WhatsApp:</b> +91 9685165987</p>
-    <p><b>Address:</b> 49/2 Moti Tabela, Near Collector Office, Indore, MP</p>
+    <!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<p style="font-family:'Poppins', sans-serif; font-size:20px; color:#1a237e; margin:6px 0;">
+  <b>👤 Hemant Gavde</b>
+</p>
+
+<p style="font-family:'Poppins', sans-serif; font-size:16px; color:#2e7d32; margin:6px 0;">
+  <b>📞 Call / WhatsApp:</b> 
+  <a href="tel:+919685165987" style="color:#2e7d32; text-decoration:none; font-weight:600;">
+    +91 9685165987
+  </a>
+</p>
+
+<p style="font-family:'Poppins', sans-serif; font-size:16px; color:#d84315; margin:6px 0;">
+  <b>📍 Address:</b> 49/2 Moti Tabela, Near Collector Office, Indore, MP
+</p>
+
+
     
     <div class="map-container">
       <!-- REPLACE WITH YOUR REAL GOOGLE MAPS IFRAME -->
@@ -456,7 +517,19 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
     </div>
   </div>
 </div>
+<script>
+  const quotes = document.querySelectorAll("#quote-box p");
+  let index = 0;
 
+  function showQuote() {
+    quotes.forEach(q => q.classList.remove("active"));
+    quotes[index].classList.add("active");
+    index = (index + 3) % quotes.length;
+  }
+
+  showQuote(); // show first quote
+  setInterval(showQuote, 5000); // change every 3 seconds
+</script>
 <script>
   function openModal(id) {
     document.getElementById(id).style.display = "flex";
