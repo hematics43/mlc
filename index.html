@@ -121,16 +121,19 @@ img {
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
     nav {
-      background: #0f0f0f;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 6px 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    }
+  background: #0f0f0f;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;   /* align left */
+  flex-wrap: nowrap;           /* ❗ prevent wrapping */
+  overflow-x: auto;              /* ❗ allow horizontal scroll */
+  white-space: nowrap;
+  padding: 6px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  scroll-behavior: smooth;
+}
     nav a {
       color: white;
       padding: 12px 20px;
@@ -138,6 +141,7 @@ img {
       font-weight: 600;
       font-size: 0.98rem;
       transition: 0.3s;
+      flex: 0 0 auto;   /* ❗ prevents shrinking */
     }
     nav a:hover { background: #333; }
 
