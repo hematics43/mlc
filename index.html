@@ -4,7 +4,7 @@
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>matHemantics Learning Classes | Indore</title>
   
   <meta name="description" content="Best coaching classes in Indore for Class 9-12 Commerce & Science. Expert teaching in Mathematics, Accounts, Economics, Physics, Chemistry. Concept-based learning for top results."/>
@@ -25,7 +25,9 @@
   gap: 10px;
   z-index: 9999;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 .book-btn{
   width: 55px;
   height: 80px;
@@ -321,16 +323,11 @@ img {
       border: 0;
     }
 
-    @media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-  }
-
-  nav a {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #333;
-  }
+    nav {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 #quote-box p {
   display: none;
@@ -347,7 +344,17 @@ img {
 .card {
   animation: fadeUp 0.8s ease;
 }
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
 
+@media (max-width: 600px) {
+  .modal-content {
+    padding: 20px;
+    border-radius: 12px;
+  }
+}
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -581,6 +588,7 @@ With a passion for teaching and guiding students, Hemant Gavde aims to inspire l
 
  
 </script>
+
 <div class="book-corner">
   <a href="https://www.amazon.in/stores/Hemant-Gavde/author/B0GN3FR5Q3?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank" class="book-btn amazon-book">
     Amazon
